@@ -4,30 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tom McCabe</title>
-    <meta name="description" content="Links to Tom McCabe's websites.">
+    <meta
+        name="description"
+        content="Personal homepage for Tom McCabe with links to research and software projects."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="page">
-        <section class="card" aria-labelledby="title">
-            <p class="eyebrow">Personal Site</p>
-            <h1 id="title">Tom McCabe</h1>
-            <p class="intro">A simple homepage with links to current projects.</p>
-            <nav class="links" aria-label="Project links">
-                <a class="link" href="https://uswindfarms.streamlit.app/" target="_blank" rel="noreferrer">
-                    <span class="label">US Wind Farms</span>
-                    <span class="url">uswindfarms.streamlit.app</span>
-                </a>
-                <a class="link" href="https://activist-aggregator.vercel.app/" target="_blank" rel="noreferrer">
-                    <span class="label">Activist Aggregator</span>
-                    <span class="url">activist-aggregator.vercel.app</span>
-                </a>
-                <a class="link" href="https://metrix-kappa.vercel.app/" target="_blank" rel="noreferrer">
-                    <span class="label">Metrix</span>
-                    <span class="url">metrix-kappa.vercel.app</span>
-                </a>
+    <header class="masthead">
+        <div class="masthead-inner">
+            <a class="brand" href="#top">Tom McCabe</a>
+            <nav class="masthead-nav" aria-label="Primary">
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </nav>
+            <div class="masthead-meta">
+                <span class="status-pill" id="status-pill">System online</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero reveal">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="section-label">Independent systems and research tools</p>
+                    <h1>Minimal interfaces for high-consequence decisions.</h1>
+                    <p class="hero-body">
+                        I build compact products for research, screening, and operating leverage.
+                        The stack stays sparse; the information density does not.
+                    </p>
+                </div>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View projects</a>
+                    <a class="btn btn-secondary" href="mailto:mccabetom6@gmail.com">Email</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="signal-bar reveal" aria-label="Current selection">
+            <div class="signal-grid">
+                <div class="signal-cell">
+                    <span class="signal-label">Selected</span>
+                    <span class="signal-value" id="signal-project">US Wind Farms</span>
+                </div>
+                <div class="signal-cell">
+                    <span class="signal-label">Mode</span>
+                    <span class="signal-value" id="signal-mode">Autoplay</span>
+                </div>
+                <div class="signal-cell">
+                    <span class="signal-label">Keys</span>
+                    <span class="signal-value">1-3 select, Enter open</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section section-alt reveal" id="projects">
+            <div class="section-shell">
+                <div class="section-header">
+                    <p class="section-label">Projects</p>
+                    <h2>Live systems</h2>
+                </div>
+                <div class="project-layout">
+                    <div class="project-list" id="project-list" role="listbox" aria-label="Project list"></div>
+                    <aside class="project-detail" id="project-detail" aria-live="polite">
+                        <div class="detail-topline">
+                            <span class="detail-index" id="detail-index">01</span>
+                            <span class="detail-progress-track" aria-hidden="true">
+                                <span class="detail-progress-bar" id="detail-progress-bar"></span>
+                            </span>
+                        </div>
+                        <p class="detail-kicker" id="detail-kicker">Research infrastructure</p>
+                        <h3 class="detail-title" id="detail-title">US Wind Farms</h3>
+                        <p class="detail-description" id="detail-description"></p>
+                        <div class="detail-actions">
+                            <a class="btn btn-primary" id="detail-link" href="#" target="_blank" rel="noreferrer">Open project</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section reveal" id="contact">
+            <div class="section-shell">
+                <div class="section-header">
+                    <p class="section-label">Contact</p>
+                    <h2>Reach me directly</h2>
+                </div>
+                <div class="contact-grid" id="contact-grid"></div>
+            </div>
         </section>
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
