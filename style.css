@@ -145,14 +145,6 @@ button:focus-visible {
     line-height: 1.08;
 }
 
-.hero-body {
-    max-width: 640px;
-    margin: 16px 0 0;
-    color: var(--cds-text-secondary);
-    font-size: 18px;
-    line-height: 1.5;
-}
-
 .hero-actions,
 .detail-actions {
     display: flex;

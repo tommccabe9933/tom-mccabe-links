@@ -4,21 +4,21 @@ const projects = [
     category: "Infrastructure data",
     href: "https://uswindfarms.streamlit.app/",
     description:
-      "Utility-scale wind sourcing workbench built on Streamlit and federal energy datasets. It normalizes EIA, EPA, and USGS plant-level records into a screening layer for sourcing, diligence, and asset triage."
+      "Geospatial sourcing platform covering every U.S. wind farm above 10 MW: 1,082 plants, 152,560 MW of capacity, and 448,214 GWh of 2024 production. It maps turbine manufacturing, month-by-month output, and efficiency regression versus peer sets into a single diligence workflow."
   },
   {
     name: "Activist Aggregator",
     category: "Event intelligence",
     href: "https://activist-aggregator.vercel.app/",
     description:
-      "Research surface for activist campaigns, filings, announcements, and short reports. It indexes structured event data and source documents into a search workflow optimized for rapid review."
+      "Live tracker for activist campaigns and short theses built on filings, presentations, announcements, and report feeds. The current corpus spans 18,799 records, 928 activists, and 1,086 targets with structured campaign timelines and document-level search."
   },
   {
-    name: "Pocket Multiples",
+    name: "Metrix",
     category: "Market dashboard",
     href: "https://metrix-kappa.vercel.app/",
     description:
-      "Mobile-first stock dashboard for fast multiple-based market analysis. It compresses valuation signals and market data into a compact interface tuned for single-user decision support."
+      "Equity analysis dashboard with instant DCF modeling and peer benchmarking across fundamentals and trading multiples. It compares ticker-level operating history and valuation ranges across time so relative value and underwriting assumptions update immediately."
   }
 ];
 
